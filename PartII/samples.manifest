@@ -1,0 +1,13 @@
+sample-id,absolute-filepath,direction
+HC1,/ifs1/User/liyinhu/16S_practice/PartII/Rawdata/HC/NN15.clean.fastq.gz,forward
+HC2,/ifs1/User/liyinhu/16S_practice/PartII/Rawdata/HC/NN16.clean.fastq.gz,forward
+HC3,/ifs1/User/liyinhu/16S_practice/PartII/Rawdata/HC/NN18.clean.fastq.gz,forward
+HC4,/ifs1/User/liyinhu/16S_practice/PartII/Rawdata/HC/NN19.clean.fastq.gz,forward
+HC5,/ifs1/User/liyinhu/16S_practice/PartII/Rawdata/HC/NN23.clean.fastq.gz,forward
+HC6,/ifs1/User/liyinhu/16S_practice/PartII/Rawdata/HC/NN24.clean.fastq.gz,forward
+AD1,/ifs1/User/liyinhu/16S_practice/PartII/Rawdata/Disease/s126.1.clean.fastq.gz,forward
+AD2,/ifs1/User/liyinhu/16S_practice/PartII/Rawdata/Disease/s206.1.clean.fastq.gz,forward
+AD3,/ifs1/User/liyinhu/16S_practice/PartII/Rawdata/Disease/s266.1.clean.fastq.gz,forward
+AD4,/ifs1/User/liyinhu/16S_practice/PartII/Rawdata/Disease/s296.1.clean.fastq.gz,forward
+AD5,/ifs1/User/liyinhu/16S_practice/PartII/Rawdata/Disease/s309.1.clean.fastq.gz,forward
+AD6,/ifs1/User/liyinhu/16S_practice/PartII/Rawdata/Disease/s315.1.clean.fastq.gz,forward
