@@ -1,0 +1,44 @@
+
+R version 3.6.1 (2019-07-05) -- "Action of the Toes"
+Copyright (C) 2019 The R Foundation for Statistical Computing
+Platform: x86_64-conda_cos6-linux-gnu (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+[Previously saved workspace restored]
+
+Bioconductor version 3.10 (BiocManager 1.30.10), ?BiocManager::install for help
+> library(vegan)
+Loading required package: permute
+Loading required package: lattice
+This is vegan 2.5-6
+> library(ggplot2)
+> 
+> data1 <- read.table("/ifs1/User/liyinhu/16S_practice/PartIII/Step0.Relative_abun/Genus_relative_abun.xls",header=T)
+> data2 <- read.table("/ifs1/User/liyinhu/16S_practice/PartIII/Step1.PCA/sample.metadata",header=T)
+> 
+> shannon <- diversity(data1[,-1], index="shannon")
+> shannon2 <- data.frame(shannon,data2$Group)
+> write.table(shannon2,"shannon.txt",quote = FALSE,row.names = FALSE,col.names = TRUE)
+> 
+> pdf("/ifs1/User/liyinhu/16S_practice/PartIII/Step2.Alpha_diversity/genus_Shannon.pdf",width=8,height=8)
+> ggplot(shannon2,aes(x=data2.Group,y= shannon))+geom_boxplot(aes(fill=data2.Group),width =0.5,alpha=0.8)+labs(x = "Group",y="Shannon index")+theme(legend.title = element_blank())
+> dev.off()
+null device 
+          1 
+> 
+> proc.time()
+   user  system elapsed 
+  4.549   5.421   9.515 

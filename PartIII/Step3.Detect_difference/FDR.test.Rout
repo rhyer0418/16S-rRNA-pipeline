@@ -1,0 +1,32 @@
+
+R version 3.6.1 (2019-07-05) -- "Action of the Toes"
+Copyright (C) 2019 The R Foundation for Statistical Computing
+Platform: x86_64-conda_cos6-linux-gnu (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+[Previously saved workspace restored]
+
+Bioconductor version 3.10 (BiocManager 1.30.10), ?BiocManager::install for help
+> data <- read.table("/ifs1/User/liyinhu/16S_practice/PartIII/Step3.Detect_difference/wilcox.test.xls",header=T,check.names=FALSE)
+> col = length(data)
+> pvalue <- data[,col]
+> FDR <- sprintf ("%0.6f",p.adjust(pvalue,method="BH"))
+> print <- cbind(data,FDR)
+> write.table(print,'/ifs1/User/liyinhu/16S_practice/PartIII/Step3.Detect_difference/Wilcox.FDR.test.xls',quote=F,sep='\t',row.names=FALSE)
+> 
+> proc.time()
+   user  system elapsed 
+  1.114   2.156   2.255 

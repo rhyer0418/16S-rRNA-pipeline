@@ -1,0 +1,25 @@
+Saved FeatureTable[RelativeFrequency] to: /ifs1/User/liyinhu/16S_practice/PartIII/Step3.Detect_difference/LefSe/Relative_abundance.table.qza
+Usage: qiime tools export [OPTIONS]
+
+  Exporting extracts (and optionally transforms) data stored inside an
+  Artifact or Visualization. Note that Visualizations cannot be transformed
+  with --output-format
+
+Options:
+  --input-path ARTIFACT/VISUALIZATION
+                        Path to file that should be exported        [required]
+  --output-path PATH    Path to file or directory where data should be
+                        exported to                                 [required]
+  --output-format TEXT  Format which the data should be exported as. This
+                        option cannot be used with Visualizations
+  --help                Show this message and exit.
+
+                  There were some problems with the command:                  
+ (1/3) Missing option "--input-path".
+ (2/3) Missing option "--output-path".
+ (3/3) Got unexpected extra argument (/ifs1/User/liyinhu/16S_practice/PartIII/
+  Step3.Detect_difference/LefSe/Relative_abundance.table.qza)
+Usage: biom convert [OPTIONS]
+Try "biom convert -h" for help.
+
+Error: Invalid value for "-i" / "--input-fp": File "Relative_abundance.table.biom" does not exist.

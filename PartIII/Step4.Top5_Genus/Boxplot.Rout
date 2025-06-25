@@ -1,0 +1,37 @@
+
+R version 3.6.1 (2019-07-05) -- "Action of the Toes"
+Copyright (C) 2019 The R Foundation for Statistical Computing
+Platform: x86_64-conda_cos6-linux-gnu (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+[Previously saved workspace restored]
+
+Bioconductor version 3.10 (BiocManager 1.30.10), ?BiocManager::install for help
+> library(ggplot2)
+> library(ggsci)
+> 
+> data <- read.table("/ifs1/User/liyinhu/16S_practice/PartIII/Step4_Top5_Genus/Top5_genus_clean.xls",header=T)
+> 
+> pdf ("/ifs1/User/liyinhu/16S_practice/PartIII/Step4_Top5_Genus/Top5_genus.pdf",,width=8,height=8)
+> p1 <- ggplot(data,aes(x=Genus,y=Abundance,fill=Group))+geom_boxplot(alpha=0.7)+labs(x="Top 5 Genus",y="Relativa abundances (%)")+theme(axis.text.x=element_text(angle=90))
+> p1+scale_fill_lancet()
+> dev.off()
+null device 
+          1 
+> 
+> proc.time()
+   user  system elapsed 
+  2.992   5.049   2.599 

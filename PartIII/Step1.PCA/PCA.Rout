@@ -1,0 +1,35 @@
+
+R version 3.6.1 (2019-07-05) -- "Action of the Toes"
+Copyright (C) 2019 The R Foundation for Statistical Computing
+Platform: x86_64-conda_cos6-linux-gnu (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+Bioconductor version 3.10 (BiocManager 1.30.10), ?BiocManager::install for help
+> library(ggfortify)
+Loading required package: ggplot2
+> 
+> data1 <- read.table("/ifs1/User/liyinhu/16S_practice/PartIII/Step0.Relative_abun/Genus_relative_abun.xls",header=T)
+> data2 <- read.table("/ifs1/User/liyinhu/16S_practice/PartIII/Step1.PCA/sample.metadata",header=T)
+> 
+> pdf("/ifs1/User/liyinhu/16S_practice/PartIII/Step1.PCA/genus_PCA.pdf",width=8,height=8)
+> autoplot(prcomp(data1[,-1]), data = data2, colour = 'Group', shape= 'Site', size=3)
+> dev.off()
+null device 
+          1 
+> 
+> proc.time()
+   user  system elapsed 
+  3.218   5.017   4.356 
